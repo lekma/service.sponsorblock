@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+
+    <defaultcontrol always="true">1</defaultcontrol>
+
+    <controls>
+
+        <control type="group">
+            <right>0</right>
+            <bottom>50%</bottom>
+            <height>10%</height>
+            <width>10%</width>
+
+            <control type="button" id="1">
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>$ADDON[service.sponsorblock 30001]</label>
+            </control>
+
+        </control>
+
+    </controls>
+
+</window>

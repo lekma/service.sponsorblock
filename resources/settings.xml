@@ -4,7 +4,24 @@
 
     <section id="service.sponsorblock">
 
-        <category id="general" label="128">
+        <!-- Session -->
+        <category id="session" label="41000">
+
+            <!-- Connection -->
+            <group id="connection" label="41100">
+
+                <setting id="session.timeout" type="number" label="41110">
+                    <level>0</level>
+                    <default>10.0</default>
+                    <constraints>
+                        <minimum>0.0</minimum>
+                        <step>10.0</step>
+                        <maximum>120.0</maximum>
+                    </constraints>
+                    <control type="slider" format="number" />
+                </setting>
+
+            </group>
 
         </category>
 

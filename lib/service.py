@@ -1,21 +1,25 @@
 # -*- coding: utf-8 -*-
 
 
-from iapc import public, Service
+from iapc import Service
+
+from player import SBPlayer
 
 
 # ------------------------------------------------------------------------------
-# SponsorBlockService
+# SBService
 
-class SponsorBlockService(Service):
+class SBService(Service):
 
     def __init__(self, *args, **kwargs):
-        super(SponsorBlockService, self).__init__(*args, **kwargs)
+        super(SBService, self).__init__(*args, **kwargs)
+        self.__player__ = SBPlayer(self.logger)
 
     def __setup__(self):
-        pass
+        self.__player__.__setup__()
 
     def __stop__(self):
+        self.__player__ = self.__player__.__stop__()
         self.logger.info("stopped")
 
     def start(self, **kwargs):
@@ -31,4 +35,4 @@ class SponsorBlockService(Service):
 # __main__ ---------------------------------------------------------------------
 
 if __name__ == "__main__":
-    SponsorBlockService().start()
+    SBService().start()

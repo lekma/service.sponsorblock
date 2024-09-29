@@ -12,3 +12,27 @@ msgstr ""
 msgctxt "#30000"
 msgid "SponsorBlock service"
 msgstr ""
+
+msgctxt "#30001"
+msgid "Skip"
+msgstr ""
+
+
+# Session settings
+
+msgctxt "#41000"
+msgid "Session"
+msgstr ""
+
+msgctxt "#41100"
+msgid "Connection"
+msgstr ""
+
+msgctxt "#41110"
+msgid "Timeout"
+msgstr ""
+
+
+msgctxt "#42110"
+msgid "Threshold"
+msgstr ""
