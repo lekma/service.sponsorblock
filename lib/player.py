@@ -122,14 +122,17 @@ class SBPlayer(Player):
 
     def onPlayBackStarted(self):
         #self.logger.info(f"onPlayBackStarted()")
-        if (
-            (item := self.getPlayingItem()) and
-            (videoID := item.getProperty("SB:videoID"))
-        ):
+        try:
+            item = self.getPlayingItem()
+        except Exception:
+            item = None
+        if (item and (videoID := item.getProperty("SB:videoID"))):
             self.__segments__ = SBSegments(
                 self.__session__.skipSegments(videoID),
                 threshold=self.__threshold__
             )
+        else:
+            self.__segments__ = None
 
     # --------------------------------------------------------------------------
 
