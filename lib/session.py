@@ -15,7 +15,7 @@ class SBSession(Session):
 
     def __init__(self, logger):
         super(SBSession, self).__init__()
-        self.logger = logger.getLogger(f"{logger.component}.session")
+        self.logger = logger.getLogger(component="session")
 
     def __setup__(self):
         if (timeout := getSetting("session.timeout", float)) > 0.0:

@@ -22,7 +22,7 @@ class SBDialog(WindowXMLDialog):
         )
 
     def __init__(self, logger):
-        self.logger = logger.getLogger(f"{logger.component}.dialog")
+        self.logger = logger.getLogger(component="dialog")
         self.__showing__ = False
         self.__seekTime__ = None
 

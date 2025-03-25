@@ -50,7 +50,7 @@ class SBPlayer(Player):
 
     def __init__(self, logger, *args, **kwargs):
         super(SBPlayer, self).__init__(*args, **kwargs)
-        self.logger = logger.getLogger(f"{logger.component}.player")
+        self.logger = logger.getLogger(component="player")
         self.__session__ = SBSession(self.logger)
         self.__dialog__ = SBDialog(self.logger)
         self.__segments__ = None
