@@ -43,9 +43,7 @@ class SBSession(Session):
         try:
             response = super(SBSession, self).get(paths, params=kwargs)
             response.raise_for_status()
-        except Timeout as error:
-            self.logger.error(error, notify=True)
-        except HTTPError as error:
+        except (HTTPError, Timeout) as error:
             self.logger.info(error)
         except Exception as error:
             self.logger.error(error)
